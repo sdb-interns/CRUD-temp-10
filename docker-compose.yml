@@ -22,7 +22,8 @@ services:
       - ./laravel:/work/laravel
 
   db:
-    platform: linux/amd64
+#    M1 Macの場合は下記の1行を使う
+#    platform: linux/amd64
     build:
       context: .
       dockerfile: ./infra/docker/mysql/Dockerfile
